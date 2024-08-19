@@ -5,7 +5,7 @@ import { store } from '../../store/store';
 import Tasks from '../../app/Tasks';
 
 describe('Tasks component', () => {
-  it('renders a list of tasks', () => {
+  it('Carga una lista de tasks', () => {
     store.getState().currentData.tasks = [
       { id: 1, title: 'Task 1', completed: false },
       { id: 2, title: 'Task 2', completed: false },
@@ -19,7 +19,7 @@ describe('Tasks component', () => {
     expect(getByText('Task 2')).toBeTruthy();
   });
 
-  it('renders a message when there are no tasks', () => {
+  it('Muestra el mensaje cuando no hay tasks', () => {
     store.getState().currentData.tasks = [];
     const { getByText } = render(
       <Provider store={store}>
@@ -29,7 +29,7 @@ describe('Tasks component', () => {
     expect(getByText('No tienes tasks. Agrega una para verla!')).toBeTruthy();
   });
 
-  it('opens the modal when the "New Task" button is pressed', () => {
+  it('Se abre el modal cuando se presiona el boton de New Task', () => {
     const { getByText } = render(
       <Provider store={store}>
         <Tasks />
@@ -40,7 +40,7 @@ describe('Tasks component', () => {
     expect(store.getState().currentData.modalOpen).toBe(true);
   });
 
-  it('renders the AgregarModal component', () => {
+  it('Se le hace render al componente de modal.', () => {
     const { getByTestId } = render(
       <Provider store={store}>
         <Tasks />

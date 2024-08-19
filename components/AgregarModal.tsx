@@ -29,6 +29,7 @@ const AgregarModal: React.FC = () => {
       visible={modalOpen}
       onRequestClose={handleCloseModal}
     >
+      {/* Agregar la funcionalidad de salir del modal al tocar el backdrop */}
       <TouchableWithoutFeedback testID='background-close' onPress={handleCloseModal}>
         <View style={styles.centeredView}>
           <TouchableWithoutFeedback onPress={(e) => e.stopPropagation()}>

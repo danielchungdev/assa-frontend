@@ -19,10 +19,12 @@ export const fetchLista = async (): Promise<ApiItem[]> => {
 const List: React.FC = () => {
   const { data, isLoading, error } = useQuery<ApiItem[], Error>('lista', fetchLista);
 
+  //Cargar el loading cuando se esta cargando la data.
   if (isLoading) {
     return <Spinner />;
   }
 
+  //Mostrar el error cuando se encuentra un error
   if (error) {
     return (
       <View style={styles.centered}>
@@ -31,6 +33,7 @@ const List: React.FC = () => {
     );
   }
 
+  //200 ok aqui
   return (
     <View style={styles.container}>
       <FlatList

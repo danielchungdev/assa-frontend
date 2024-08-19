@@ -17,7 +17,7 @@ const ListItem: React.FC<ListItemProps> = ({ item }) => {
   return (
     <View style={styles.item}>
       <Image 
-        source={imageError ? require('@/assets/images/pfp-placeholder.jpeg') : { uri: item.avatar }}
+        source={imageError ? require('@/assets/images/pfp-placeholder.jpeg') : { uri: item.avatar }} // Muestra la imagen de placeholder, si hay un error de carga.
         style={styles.image}
         defaultSource={require('@/assets/images/pfp-placeholder.jpeg')}
         onError={handleImageError}

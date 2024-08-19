@@ -18,9 +18,11 @@ const CustomButton: React.FC<CustomButtonProps> = ({ style, text, pageName, type
     <Text style={styles.text}>{text}</Text>
   );
 
-  const defaultHref = '/defaultPage' as Href<string>;
+  //Aqui para que no haya el error de un link sin href, pero no forzar a un boton de tipo action 
+  //a requerir siempre el string.
+  const defaultHref = '/defaultPage' as Href<string>; 
   const href = pageName || defaultHref;
-
+  
   if (type === 'Link') {
     return (
       <Link href={href} style={[styles.buttonBackground, style]} asChild testID='link-component'>

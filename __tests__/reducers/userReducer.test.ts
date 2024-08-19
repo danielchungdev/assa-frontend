@@ -8,7 +8,7 @@ describe('Reducer', () => {
     });
   });
 
-  it('should handle OPENMODAL action', () => {
+  it('Deberia encargarse de OPENMODAL action', () => {
     const initialState = {
       tasks: [],
       modalOpen: false,
@@ -23,7 +23,7 @@ describe('Reducer', () => {
     });
   });
 
-  it('should handle CLOSEMODAL action', () => {
+  it('Deberia encargarse de CLOSEMODAL action', () => {
     const initialState = {
       tasks: [],
       modalOpen: true,
@@ -38,7 +38,7 @@ describe('Reducer', () => {
     });
   });
 
-  it('should handle ADDTASK action', () => {
+  it('Deberia encargarse de ADDTASK action', () => {
     const initialState = {
       tasks: [],
       modalOpen: false,
@@ -59,7 +59,7 @@ describe('Reducer', () => {
     });
   });
 
-  it('should handle ADDTASK action with existing tasks', () => {
+  it('Deberia encargarse de ADDTASK action con tasks existentes', () => {
     const initialState = {
       tasks: [
         {
@@ -91,7 +91,7 @@ describe('Reducer', () => {
     });
   });
 
-  it('should return the current state for unknown action', () => {
+  it('Debe regresar el estado a cualquier action desconocido', () => {
     const initialState = {
       tasks: [],
       modalOpen: false,

@@ -76,7 +76,7 @@ describe('AgregarModal component', () => {
     expect(dispatch).toHaveBeenCalledWith(closeModalAction());
   });
 
-  it('calls handleCloseModal when modal is closed', () => {
+  it('llama handleCloseModal cuando se presiona el backdrop del modal', () => {
     store.getState().currentData.modalOpen = true; // Settear el estado de modal a open
     const { getByTestId } = render(
       <Provider store={store}>

@@ -25,7 +25,7 @@ const Tasks: React.FC = () => {
             renderItem={renderItem}
             contentContainerStyle={styles.listContent}
             scrollEnabled={tasks.length > 5} // Adjust this number based on how many tasks fit in your screen
-          />
+          /> 
         ) : (
           <Text style={styles.message}>No tienes tasks. Agrega una para verla!</Text>
         )}
